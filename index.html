@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuxtVerse - современный блог на Nuxt.js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body class="c`ontainer mx-auto">
+    <!-- шапка -->
+    <header class="flex justify-between py-6">
+        <nav class="flex items-center gap-8">
+            <div class="flex items-center gap-3">
+                <img class="w-8 h-8" src="./img/favicon.png" alt="Логотип">
+                <a class="font-bold text-2xl" href="#">NuxtVerse</a>
+            </div>
+            <ul class="flex gap-6 text-xl font-semibold">
+                <li><a class="flex gap-2 text-black/50" href="#">Продукты<span class="rotate-90">›</span></a></li>
+                <li><a class="flex gap-2 text-black/50" href="#">Услуги<span class="rotate-90">›</span></a></li>
+                <li><a class="flex gap-2 text-black/50" href="#">Цены<span class="rotate-90">›</span></a></li>
+                <li><a class="flex gap-2 text-black/50" href="#">Ресурсы<span class="rotate-90">›</span></a></li>
+                <li><a class="flex gap-2 text-black/50" href="#">О нас<span class="rotate-90">›</span></a></li>
+            </ul>
+        </nav>
+        <div class="flex gap-3 text-xl font-semibold">
+            <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-xl hover:brightness-90 active:scale-90">Войти</button>
+            <button class="flex items-center justify-center py-2 px-5 text-white bg-teal-600 border border-teal-700 rounded-md shadow-xl hover:brightness-90 active:scale-90">Создать профиль</button>
+        </div>
+    </header>
+</body>
+</html>
