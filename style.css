@@ -20,8 +20,8 @@ main {
 }
 
 .line {
-    fill: none;
-    stroke: black;
+    fill: none; 
+    stroke: currentColor;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
@@ -30,8 +30,8 @@ main {
 }
 
 .line-top-bottom {stroke-dasharray: 12 63;}
-.hamburger input:checked+svg {transform: rotate(-45deg);}
-.hamburger input:checked+svg .line-top-bottom {
+.hamburger svg {transform: rotate(-45deg);}
+.hamburger svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
 }
@@ -39,14 +39,8 @@ main {
 
 
 @keyframes height {
-    from {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    to {
-        transform: scaleY(1);
-        opacity: 1;
-    }
+    from {transform: scaleY(0);opacity: 0;}
+    to {transform: scaleY(1);opacity: 1;}
 }
 
 .animal_burger {animation: height .3s ease-in-out;}

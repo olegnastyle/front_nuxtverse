@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="mx-auto">
-    <header class="w-full mx-auto lg:container px-3 lg:px-0 py-6 bg-white">
+    <header class="w-full mx-auto lg:container px-3 lg:px-0 py-3 lg:py-6 bg-white">
         
         <div class="flex flex-wrap items-center justify-between">
             <!-- десктопная шапка -->
@@ -27,16 +27,16 @@
                 </ul>
             </nav>
             <div class="hidden lg:flex gap-3 text-xl font-semibold">
-                <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-md hover:brightness-90 active:scale-90">Войти</button>
-                <button class="flex items-center justify-center py-2 px-5 text-white bg-teal-600 border border-teal-700 rounded-md shadow-md hover:brightness-90 active:scale-90">Создать профиль</button>
+                <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-md hover:brightness-90 active:brightness-75">Войти</button>
+                <button class="flex items-center justify-center py-2 px-5 text-white bg-teal-600 border border-teal-700 rounded-md shadow-md hover:brightness-90 active:brightness-75">Создать профиль</button>
             </div>
             <!-- / десктопная шапка -->
 
             <!-- мобильная шапка -->
             <input id="mobile-menu" class="hidden peer/menu" type="checkbox">
-            <label for="mobile-menu" class="cursor-pointer hamburger">
-                <svg viewBox="0 0 32 32" class="size-10">
-                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <label for="mobile-menu" class="block lg:hidden cursor-pointer *:peer-checked/menu:[transform:rotate(-45deg)]">
+                <svg for="mobile-menu" viewBox="0 0 32 32" class="size-10">
+                    <path class="line line-top-bottom " d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
                     <path class="line" d="M7 16 27 16"></path>
                 </svg>
             </label>
@@ -92,9 +92,9 @@
                         <li><a href="#">Cookie setting</a></li>
                     </ul>
                 </nav>
-                <div class="flex flex-col-reverse lg:hidden gap-3 text-xl font-semibold">
-                    <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-md hover:brightness-90 active:scale-90">Войти</button>
-                    <button class="flex items-center justify-center py-2 px-5 text-white bg-teal-600 border border-teal-700 rounded-md shadow-md hover:brightness-90 active:scale-90">Создать профиль</button>
+                <div class="flex flex-col lg:hidden gap-3 text-xl font-semibold">
+                    <button class="flex items-center justify-center py-2 px-5 text-white bg-teal-600 border border-teal-700 rounded-md shadow-md hover:brightness-90 active:brightness-75">Создать профиль</button>
+                    <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-md hover:brightness-90 active:brightness-75">Войти</button>
                 </div>
             </div>
             <!-- / мобильная шапка -->
@@ -103,7 +103,7 @@
     <main class="bg-red-600/20">
 
     </main>
-    <footer class="w-full mx-auto sm:container py-6">
+    <footer class="sm:container w-full mx-auto py-6 text-center">
         <h3>&copy; 2025</h3>
     </footer>
 </body>
