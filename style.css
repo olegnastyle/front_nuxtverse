@@ -30,28 +30,24 @@ main {
 }
 
 @keyframes hamburger-close {
-    from {
-        stroke-dasharray: 12 63;
-        stroke-dashoffset: none;
-    }
-
-    to {
-        stroke-dasharray: 20 300;
-        stroke-dashoffset: -32.42;
-    }
+    from {stroke-dasharray: 12 63;stroke-dashoffset: none;}
+    to {stroke-dasharray: 20 300;stroke-dashoffset: -32.42;}
 }
 
-.line-top-bottom {stroke-dasharray: 12 63;}
-.hamburger svg {transform: rotate(-45deg);}
-.hamburger svg .line-top-bottom {
-    animation: hamburger-close .4s linear forwards;
+.hamburger_close {animation: hamburger-close .4s linear forwards;}
+
+@keyframes hamburger-open {
+    from {stroke-dasharray: 12 63;stroke-dashoffset: none;}
+    to {stroke-dasharray: 20 300;stroke-dashoffset: -32.42;}
 }
+.hamburger_open {animation: hamburger-open .4s linear forwards reverse;}
 /* / стили для бургера */
 
-
+/* анимация мобильного меню */
 @keyframes height {
     from {transform: scaleY(0);opacity: 0;}
     to {transform: scaleY(1);opacity: 1;}
 }
 
 .animal_burger {animation: height .3s ease-in-out;}
+/* / анимация мобильного меню */
