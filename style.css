@@ -40,13 +40,11 @@ main {
 
 @keyframes height {
     from {
-        transform: translateY(-100%) scale(0);
-        /* transform: scale(0); */
+        transform: scaleY(0);
         opacity: 0;
     }
     to {
-        transform: translateY(0) scale(1);
-        /* transform: scale(1); */
+        transform: scaleY(1);
         opacity: 1;
     }
 }
