@@ -49,5 +49,10 @@ main {
     to {transform: scaleY(1);opacity: 1;}
 }
 
+/* @keyframes height {
+    from {transform: translateX(200%);opacity: 0;}
+    to {transform: translateX(0);opacity: 1;}
+} */
+
 .animal_burger {animation: height .3s ease-in-out;}
 /* / анимация мобильного меню */

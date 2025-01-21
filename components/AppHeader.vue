@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NuxtVerse - современный блог на Nuxt.js</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="mx-auto">
-    <header class="w-full mx-auto lg:container px-3 lg:px-0 py-3 lg:py-6 bg-white">
+<template>
+        <header class="w-full mx-auto lg:container px-3 lg:px-0 py-3 lg:py-6 bg-white">
         
         <div class="flex flex-wrap items-center justify-between">
             <!-- десктопная шапка -->
@@ -106,11 +96,4 @@
             <!-- / мобильная шапка -->
         </div>
     </header>
-    <main class="bg-red-600/20">
-
-    </main>
-    <footer class="sm:container w-full mx-auto py-6 text-center">
-        <h3>&copy; 2025</h3>
-    </footer>
-</body>
-</html>
+</template>
