@@ -93,7 +93,7 @@ import { NuxtLink } from '#components';
                     </ul>
                 </nav>
                 <div class="flex flex-col lg:hidden gap-3 text-xl font-semibold">
-                    <button class="py-2 px-5 text-white bg-teal-600 hover:brightness-90 active:brightness-75 rounded-md shadow-md inset-shadow-sm inset-shadow-white/20 ring ring-teal-600 inset-ring inset-ring-white/15 cursor-pointer">Создать профиль</button>
+                    <button class="py-2 px-5 text-white bg-teal-600 hover:brightness-90 active:brightness-75 rounded-md mx-0.5 shadow-md inset-shadow-sm inset-shadow-white/20 ring ring-teal-600 inset-ring inset-ring-white/15 cursor-pointer">Создать профиль</button>
                     <button class="flex items-center justify-center py-2 px-5 text-black/50 bg-white border border-black/10 rounded-md shadow-md hover:brightness-90 active:brightness-75 cursor-pointer">Войти</button>
                 </div>
             </div>
