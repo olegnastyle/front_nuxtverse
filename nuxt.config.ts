@@ -11,5 +11,8 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      allowedHosts: ['8862ed107ce7.vps.myjino.ru'],
+    },
   },
 });
