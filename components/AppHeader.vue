@@ -1,19 +1,23 @@
+<script setup lang="ts">
+import { NuxtLink } from '#components';
+
+</script>
+
 <template>
-        <header class="w-full mx-auto lg:container px-3 lg:px-0 py-3 lg:py-6 bg-white">
-        
+    <header class="w-full mx-auto lg:container px-3 lg:px-0 py-3 lg:py-6 bg-white">
         <div class="flex flex-wrap items-center justify-between">
             <!-- десктопная шапка -->
             <nav class="flex items-center gap-8">
-                <div class="flex items-center gap-3">
-                    <img class="w-8 h-8" src="./img/favicon.png" alt="Логотип">
-                    <a class="font-bold text-2xl" href="#">NuxtVerse</a>
-                </div>
+                <NuxtLink to="/" class="flex items-center gap-3">
+                    <img class="w-8 h-8" src="@/public/favicon.png" alt="Логотип">
+                    <p class="font-bold text-2xl">NuxtVerse</p>
+                </NuxtLink>
                 <ul class="hidden lg:flex items-center gap-6 text-lg font-semibold">
                     <li><a class="flex gap-2 text-black/50" href="#">Продукты<span class="rotate-90">›</span></a></li>
                     <li><a class="flex gap-2 text-black/50" href="#">Услуги<span class="rotate-90">›</span></a></li>
                     <li><a class="flex gap-2 text-black/50" href="#">Цены<span class="rotate-90">›</span></a></li>
                     <li><a class="flex gap-2 text-black/50" href="#">Ресурсы<span class="rotate-90">›</span></a></li>
-                    <li><a class="flex gap-2 text-black/50" href="#">О нас<span class="rotate-90">›</span></a></li>
+                    <li><NuxtLink class="flex gap-2 text-black/50" to="/about">О нас</NuxtLink></li>
                 </ul>
             </nav>
             <div class="hidden lg:flex gap-3 text-xl font-semibold">
