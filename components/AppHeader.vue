@@ -3,9 +3,9 @@
         <div class="flex flex-wrap items-center justify-between">
             <!-- десктопная шапка -->
             <nav class="flex items-center gap-8">
-                <NuxtLink to="/" class="flex items-center justify-center gap-3 relative">
+                <NuxtLink to="/" class="flex items-center justify-center gap-3 relative text-emerald-500 hover:text-emerald-600 active:text-emerald-500">
                     <img class="absolute w-12 h-12 rotate-180" src="@/public/favicon.png" alt="Логотип">
-                    <p class="font-bold text-2xl text-emerald-500 hover:text-emerald-600 active:text-emerald-500">Nuxt &nbsp;<span class="relative z-10">Verse</span></p>
+                    <p class="font-bold text-2xl">Nuxt &nbsp;<span class="relative z-10">Verse</span></p>
                 </NuxtLink>
                 <ul class="hidden lg:flex items-center gap-6 text-lg font-semibold ">
                     <li>
