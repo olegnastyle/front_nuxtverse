@@ -14,10 +14,10 @@ import { NuxtLink } from '#components';
                 </NuxtLink>
                 <ul class="hidden lg:flex items-center gap-6 text-lg font-semibold">
                     <li>
-                        <a class="flex gap-2 text-black/50" href="#">Продукты</a>
+                        <a class="flex gap-2 text-black/50 hover:text-black/80 active:text-teal-600" href="#">Продукты</a>
                     </li>
                     <li class="flex items-center gap-2 relative hover:*:block hover:*:nth-[2]:rotate-180">
-                        <a class="flex gap-2 text-black/50" href="#">Услуги</a>
+                        <a class="flex gap-2 text-black/50 hover:text-black/80 active:text-teal-600" href="#">Услуги</a>
                         <span class="text-black/50">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -53,9 +53,9 @@ import { NuxtLink } from '#components';
                                 </li>
                             </ul>
                     </li>
-                    <li><a class="flex gap-2 text-black/50" href="#">Цены</a></li>
-                    <li><a class="flex gap-2 text-black/50" href="#">Ресурсы</a></li>
-                    <li><NuxtLink class="flex gap-2 text-black/50" to="/about">О нас</NuxtLink></li>
+                    <li><a class="flex gap-2 text-black/50 hover:text-black/80 active:text-teal-600" href="#">Цены</a></li>
+                    <li><a class="flex gap-2 text-black/50 hover:text-black/80 active:text-teal-600" href="#">Ресурсы</a></li>
+                    <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-teal-600" to="/about">О нас</NuxtLink></li>
                 </ul>
             </nav>
             <div class="hidden lg:flex gap-3 text-xl font-semibold">
