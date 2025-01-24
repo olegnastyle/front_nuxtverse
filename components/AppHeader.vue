@@ -23,7 +23,7 @@ import { NuxtLink } from '#components';
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                         </span>
-                        <ul class="hidden absolute top-8 w-96 p-2 rounded-lg border border-black/20">
+                        <ul class="hidden absolute top-7 w-96 p-2 rounded-lg border border-black/20">
                                 <li>
                                     <a href="#" class="flex gap-3 w-full p-2 rounded-md hover:bg-teal-600/10">
                                         <svg class="text-teal-600 size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4ZM4 5V19H20V5H4ZM6 7H12V13H6V7ZM8 9V11H10V9H8ZM14 9H18V7H14V9ZM18 13H14V11H18V13ZM6 15V17L18 17V15L6 15Z"></path></svg>
