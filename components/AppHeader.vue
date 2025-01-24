@@ -9,7 +9,7 @@
                 </NuxtLink>
                 <ul class="hidden lg:flex items-center gap-6 text-lg font-semibold ">
                     <li>
-                        <NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/products.vue">Продукты</NuxtLink>
+                        <NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/products">Продукты</NuxtLink>
                     </li>
                     <li class="flex items-center gap-2 relative hover:*:block hover:*:nth-[2]:rotate-180">
                         <NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/services">Услуги</NuxtLink>
@@ -49,7 +49,7 @@
                             </ul>
                     </li>
                     <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/prices">Цены</NuxtLink></li>
-                    <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/resources.vue">Ресурсы</NuxtLink></li>
+                    <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/resources">Ресурсы</NuxtLink></li>
                     <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/about">О нас</NuxtLink></li>
                 </ul>
             </nav>
