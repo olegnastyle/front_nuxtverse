@@ -5,14 +5,14 @@
             <nav class="flex items-center gap-8">
                 <NuxtLink to="/" class="flex items-center justify-center gap-3 relative">
                     <img class="absolute w-12 h-12 rotate-180" src="@/public/favicon.png" alt="Логотип">
-                    <p class="font-bold text-2xl text-emerald-500">Nuxt &nbsp;<span class="relative z-10">Verse</span></p>
+                    <p class="font-bold text-2xl text-emerald-500 hover:text-emerald-600 active:text-emerald-500">Nuxt &nbsp;<span class="relative z-10">Verse</span></p>
                 </NuxtLink>
                 <ul class="hidden lg:flex items-center gap-6 text-lg font-semibold ">
                     <li>
-                        <a class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" href="#">Продукты</a>
+                        <NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/products.vue">Продукты</NuxtLink>
                     </li>
                     <li class="flex items-center gap-2 relative hover:*:block hover:*:nth-[2]:rotate-180">
-                        <a class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" href="#">Услуги</a>
+                        <NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/services">Услуги</NuxtLink>
                         <span class="text-black/50">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -20,13 +20,13 @@
                         </span>
                         <ul class="hidden absolute top-7 z-50 w-96 p-2 bg-white rounded-lg border border-black/10 ">
                                 <li>
-                                    <a href="#" class="flex gap-3 w-full p-2 rounded-md hover:bg-emerald-600/10 active:bg-emerald-600/20 transition-all">
+                                    <NuxtLink to="/blog" class="flex gap-3 w-full p-2 rounded-md hover:bg-emerald-600/10 active:bg-emerald-600/20 transition-all">
                                         <svg class="text-emerald-600 size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4ZM4 5V19H20V5H4ZM6 7H12V13H6V7ZM8 9V11H10V9H8ZM14 9H18V7H14V9ZM18 13H14V11H18V13ZM6 15V17L18 17V15L6 15Z"></path></svg>
                                         <div>
                                             <h3>Блог</h3>
                                             <p class="text-black/50 font-normal">Последние отраслевые новости, обновления и информация.</p>
                                         </div>
-                                    </a>
+                                    </NuxtLink>
                                 </li>
                                 <li>
                                     <a href="#" class="flex gap-3 w-full p-2 rounded-md hover:bg-emerald-600/10 active:bg-emerald-600/20 transition-all">
@@ -48,8 +48,8 @@
                                 </li>
                             </ul>
                     </li>
-                    <li><a class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" href="#">Цены</a></li>
-                    <li><a class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" href="#">Ресурсы</a></li>
+                    <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/prices">Цены</NuxtLink></li>
+                    <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/resources.vue">Ресурсы</NuxtLink></li>
                     <li><NuxtLink class="flex gap-2 text-black/50 hover:text-black/80 active:text-emerald-600" to="/about">О нас</NuxtLink></li>
                 </ul>
             </nav>
