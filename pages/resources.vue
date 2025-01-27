@@ -22,7 +22,7 @@
       </div>
   
       <!-- Форма для ввода сообщений -->
-      <form @submit.prevent="sendMessage" class="flex items-center space-x-4">
+      <form @submit.prevent="sendMessage" class="flex flex-col md:flex-row items-center space-x-4">
         <input
           v-model="userMessage"
           type="text"
