@@ -72,7 +72,7 @@ const sendMessage = async () => {
     const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.VUE_APP_API_KEY}`,
+        Authorization: `Bearer ${process.env.NUXT_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "http://localhost:3000",
         "X-Title": "Big Cheese",
@@ -88,6 +88,10 @@ const sendMessage = async () => {
         ],
       }),
     });
+
+
+    console.log('API Token:', process.env.NUXT_API_KEY);
+
 
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
