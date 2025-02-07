@@ -1,4 +1,7 @@
 <template>
+
+
+
   <div class="min-h-screen bg-gray-100 p-6">
     <!-- Заголовок -->
     <h1 class="text-base/7 font-semibold text-left text-emerald-600">Ресурсы</h1>
@@ -6,9 +9,7 @@
     <!-- Окно чата -->
     <div class="bg-white shadow rounded-lg p-4 mb-6 h-80 overflow-y-auto">
       <div v-for="(msg, index) in chatHistory" :key="index" class="mb-4">
-        <p
-          :class="msg.role === 'user' ? 'text-blue-600 font-medium' : 'text-gray-800 font-semibold'"
-        >
+        <p :class="msg.role === 'user' ? 'text-blue-600 font-medium' : 'text-gray-800 font-semibold'">
           {{ msg.role === 'user' ? 'Вы:' : 'AI:' }}
         </p>
         <div v-html="parseMarkdown(msg.content)" class="text-gray-700"></div> <!-- Отображаем распарсенный Markdown -->
@@ -43,7 +44,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import markdownit from "markdown-it";
 
 const md = markdownit(); // Создаем экземпляр markdown-it для парсинга
@@ -52,6 +52,10 @@ const chatHistory = ref([]); // История чата
 const userMessage = ref(""); // Сообщение пользователя
 const loading = ref(false); // Индикатор загрузки
 const error = ref(null); // Ошибки
+
+// Получаем токен через useRuntimeConfig
+const config = useRuntimeConfig();
+const token = ref(process.env.NUXT_API_SECRET); // Используем публичный токен
 
 // Функция для парсинга Markdown в HTML
 const parseMarkdown = (content) => {
@@ -69,44 +73,46 @@ const sendMessage = async () => {
     loading.value = true;
     error.value = null;
 
-    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.NUXT_API_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": "http://localhost:3000",
-        "X-Title": "Big Cheese",
-      },
-      body: JSON.stringify({
-        model: "deepseek/deepseek-r1",
-        messages: [
-          ...chatHistory.value.map((msg) => ({
-            role: msg.role,
-            content: msg.content,
-          })),
-          { role: "user", content: userMessage.value },
-        ],
-      }),
-    });
-
-
-    console.log('API Token:', process.env.NUXT_API_KEY);
-
-
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-
-    const data = await res.json();
-
-    // Добавление ответа AI в историю чата
-    if (data?.choices?.length) {
-      chatHistory.value.push({
-        role: "assistant",
-        content: data.choices[0].message.content,
+    // Проверка наличия токена перед запросом
+    if (token.value && token.value !== "undefined" && token.value !== "") {
+      console.log("Токен найден:", token.value); // Отладочный вывод
+      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token.value}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "http://localhost:3000",
+          "X-Title": "Big Cheese",
+        },
+        body: JSON.stringify({
+          model: "deepseek/deepseek-r1",
+          messages: [
+            ...chatHistory.value.map((msg) => ({
+              role: msg.role,
+              content: msg.content,
+            })),
+            { role: "user", content: userMessage.value },
+          ],
+        }),
       });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      // Добавление ответа AI в историю чата
+      if (data?.choices?.length) {
+        chatHistory.value.push({
+          role: "assistant",
+          content: data.choices[0].message.content,
+        });
+      } else {
+        throw new Error("Unexpected response structure");
+      }
     } else {
-      throw new Error("Unexpected response structure");
+      throw new Error("API Token not found or invalid");
     }
   } catch (err) {
     console.error("Error:", err.message);
@@ -116,4 +122,12 @@ const sendMessage = async () => {
     userMessage.value = ""; // Очистка поля ввода
   }
 };
+
+onMounted(() => {
+  // Получаем токен из переменной окружения
+  if (!token.value || token.value === "undefined" || token.value === "") {
+    error.value = "API Token is not set or invalid";
+    console.error("Ошибка: API Token not found or invalid");
+  }
+})
 </script>
