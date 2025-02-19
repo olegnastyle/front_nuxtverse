@@ -59,3 +59,20 @@ main {
 
 .animal_burger {animation: height .3s ease-in-out;}
 /* / анимация мобильного меню */
+
+@keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+.animate__slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
