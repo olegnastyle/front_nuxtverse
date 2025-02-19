@@ -1,7 +1,5 @@
 <template>
-
-
-
+  
   <div class="min-h-screen bg-gray-100 p-6">
     <!-- Заголовок -->
     <h1 class="text-base/7 font-semibold text-left text-emerald-600">Ресурсы</h1>
